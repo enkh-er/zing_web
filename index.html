@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="newsapi">
+        <meta name="keywords" content="zing, зинг, search engine">
+        <link rel="stylesheet" href="assets/style.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="navContainer">
+            <nav class="navbar">
+                <div class="auth">
+                    <button class="btn btn-default">Нэвтрэх</button>
+                    <button class="btn btn-primary">Бүртгүүлэх</button>
+                </div>
+                <h1 class="navh1">Мэдээ хайх</h1>
+                <div class="navSearch">
+                    <form class="navForm">
+                        <input class="searchInput" type="text" />
+                        <button class="iconButton" aria-label="search">
+                            <i class='fas fa-search'></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="scene">
+                    <img src="assets/photos/worldwide.svg" class="layer img1" 
+                        data-speed="5" alt="worldwide">
+
+                    <img src="assets/photos/planet.svg" class="layer img2"
+                        data-speed="-5" alt="planet">
+
+                    <img src="assets/photos/project.svg" class="layer img3"
+                        data-speed="2" alt="project">
+
+                    <img src="assets/photos/saturn.svg" class="layer img4"
+                        data-speed="-3" alt="saturn">
+
+                    <!-- <img src="assets/photos/solar-system.svg" class="layer img5"
+                        alt="solar-system"> -->
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="template">
+                <button class="borderBox" aria-label="border">
+                    <div class="plusIcon"></div>
+                </button>
+            </section>
+        </main>
+
+        <section id="loginModal">
+            <header>
+                <button>
+                    Нэвтрэх
+                </button>
+                <button>
+                    Бүртгүүлэх
+                </button>
+            </header>
+            <form>
+                <label for="loginUsername"> </label>
+                <input
+                    id="loginUsername"
+                    name="username"
+                    type="text"
+                    placeholder="Нэвтрэх нэр эсвэл и-мэйл"
+                    required
+                    />
+
+                <label for="loginPassword"></label>
+                <input
+                    id="loginPassword"
+                    name="password"
+                    type="password"
+                    placeholder="Нууц үг"
+                    required
+                    />
+
+                <div>
+                    <button class="btn btn-primary" type="submit">
+                        Нэвтрэх
+                    </button>
+
+                    <button class="btn btn-secondary">
+                        Буцах
+                    </button>
+                </div>
+            </form>
+            <a href="#">
+                Нууц үг мартсан?
+            </a>
+            <br />
+            <button class="btn btn-primary">
+                Facecook эрхээр нэвтрэх
+            </button>
+            <button class="btn btn-primary">
+                Google эрхээр нэвтрэх
+            </button>
+        </section>
+
+        <section id="registerModal">
+            <header>
+                <button>
+                    Нэвтрэх
+                </button>
+                <button>
+                    Бүртгүүлэх
+                </button>
+            </header>
+            <form>
+                <label for="username"></label>
+                <input
+                    name="username"
+                    type="text"
+                    id="username"
+                    placeholder="Нэвтрэх нэр эсвэл и-мэйл"
+                    required
+                    />
+
+                <label for="email"></label>
+                <input
+                    name="email"
+                    type="email"
+                    id="email"
+                    placeholder="И-мэйл"
+                    required
+                    />
+
+                <label for="password"></label>
+                <input
+                    name="password"
+                    type="password"
+                    id="password"
+                    placeholder="Нууц үг"
+                    required
+                    />
+
+                <label for="repeatPassword"> </label>
+                <input
+                    id="repeatPassword"
+                    name="repeatPassword"
+                    type="password"
+                    placeholder="Нууц үг давтах"
+                    required
+                    />
+
+                <div>
+                    <button class="btn btn-primary" type="submit">
+                        Нэвтрэх
+                    </button>
+
+                    <button
+                        class="btn btn-secondary">
+                        Буцах
+                    </button>
+                </div>
+            </form>
+        </section>
+        <footer></footer>
+        <script src="star.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            document.addEventListener("mouseover",parallax);
+            function parallax(e){
+                this.querySelectorAll('.layer').forEach(layer => {
+                const speed = layer.getAttribute('data-speed');
+                let x=Math.floor(Math.random()*window.innerWidth);
+                let y=Math.floor(Math.random()*window.innerHeight/2);
+
+                layer.style.transfrom = 'translateX('+10+'px) translateY('+10+'px)';
+    
+                });
+            }
+        </script>
+    </body>
+</html>
