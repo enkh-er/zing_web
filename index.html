@@ -15,8 +15,9 @@
         <header class="navContainer">
             <nav class="navbar">
                 <div class="auth">
-                    <button class="btn btn-default">Нэвтрэх</button>
-                    <button class="btn btn-primary">Бүртгүүлэх</button>
+                    <button class="btn btn-default" onclick="openLoginForm()"
+                        style="width:auto;">Нэвтрэх</button>
+                    <button class="btn btn-primary" onclick="openRegisterForm()">Бүртгүүлэх</button>
                 </div>
                 <h1 class="navh1">Мэдээ хайх</h1>
                 <div class="navSearch">
@@ -28,7 +29,7 @@
                     </form>
                 </div>
                 <div class="scene">
-                    <img src="assets/photos/worldwide.svg" class="layer img1" 
+                    <img src="assets/photos/worldwide.svg" class="layer img1"
                         data-speed="5" alt="worldwide">
 
                     <img src="assets/photos/planet.svg" class="layer img2"
@@ -40,8 +41,8 @@
                     <img src="assets/photos/saturn.svg" class="layer img4"
                         data-speed="-3" alt="saturn">
 
-                    <!-- <img src="assets/photos/solar-system.svg" class="layer img5"
-                        alt="solar-system"> -->
+                    <img src="assets/photos/solar-system.svg" class="layer img5"
+                        alt="solar-system">
                 </div>
             </nav>
         </header>
@@ -52,31 +53,30 @@
                 </button>
             </section>
         </main>
-
-        <section id="loginModal">
-            <header>
-                <button>
-                    Нэвтрэх
-                </button>
-                <button>
-                    Бүртгүүлэх
-                </button>
-            </header>
-            <form>
-                <label for="loginUsername"> </label>
+        <section id="loginModal" class="modal">
+            <form class="modal-content animate">
+                <header class="modal-header">
+                    <button  class="btn btn-bottomBorder fullWidth">
+                        Нэвтрэх
+                    </button>
+                    <button class="btn btn-nobottomBorder fullWidth" onclick="openRegisterForm()">
+                        Бүртгүүлэх
+                    </button>
+                </header>
+                <!-- <form> -->
+                <!-- <label for="username"></label> -->
                 <input
-                    id="loginUsername"
                     name="username"
                     type="text"
+                    class="inputForm"
                     placeholder="Нэвтрэх нэр эсвэл и-мэйл"
                     required
                     />
-
-                <label for="loginPassword"></label>
+                <!-- <label for="password"></label> -->
                 <input
-                    id="loginPassword"
                     name="password"
                     type="password"
+                    class="inputForm"
                     placeholder="Нууц үг"
                     required
                     />
@@ -86,76 +86,73 @@
                         Нэвтрэх
                     </button>
 
-                    <button class="btn btn-secondary">
+                    <button class="btn btn-secondary"
+                        onclick="closeLoginForm()">
                         Буцах
                     </button>
                 </div>
+                <!-- </form> -->
+                <a href="#">
+                    Нууц үг мартсан?
+                </a>
+                <br />
+                <button class="btn form-social-btn">
+                    Facecook эрхээр нэвтрэх
+                </button>
+                <button class="btn form-social-btn">
+                    Google эрхээр нэвтрэх
+                </button>
             </form>
-            <a href="#">
-                Нууц үг мартсан?
-            </a>
-            <br />
-            <button class="btn btn-primary">
-                Facecook эрхээр нэвтрэх
-            </button>
-            <button class="btn btn-primary">
-                Google эрхээр нэвтрэх
-            </button>
         </section>
 
-        <section id="registerModal">
-            <header>
-                <button>
+        <section id="registerModal"  class="modal">
+            <form class="modal-content animate">
+            <header class="modal-header">
+                <button class="btn btn-nobottomBorder fullWidth" onclick="openLoginForm()">
                     Нэвтрэх
                 </button>
-                <button>
+                <button class="btn btn-bottomBorder fullWidth"> 
                     Бүртгүүлэх
                 </button>
             </header>
-            <form>
-                <label for="username"></label>
+            
                 <input
                     name="username"
                     type="text"
-                    id="username"
+                    class="inputForm"
                     placeholder="Нэвтрэх нэр эсвэл и-мэйл"
                     required
                     />
-
-                <label for="email"></label>
                 <input
                     name="email"
                     type="email"
-                    id="email"
+                    class="inputForm"
                     placeholder="И-мэйл"
                     required
                     />
-
-                <label for="password"></label>
                 <input
                     name="password"
                     type="password"
-                    id="password"
+                    class="inputForm"
                     placeholder="Нууц үг"
                     required
                     />
-
-                <label for="repeatPassword"> </label>
                 <input
-                    id="repeatPassword"
                     name="repeatPassword"
                     type="password"
+                    class="inputForm"
                     placeholder="Нууц үг давтах"
                     required
                     />
 
                 <div>
                     <button class="btn btn-primary" type="submit">
-                        Нэвтрэх
+                        Бүртгүүлэх
                     </button>
 
                     <button
-                        class="btn btn-secondary">
+                    onclick="closeRegisterForm()"
+                        class="btn btn-secondary" >
                         Буцах
                     </button>
                 </div>
@@ -163,18 +160,6 @@
         </section>
         <footer></footer>
         <script src="star.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            document.addEventListener("mouseover",parallax);
-            function parallax(e){
-                this.querySelectorAll('.layer').forEach(layer => {
-                const speed = layer.getAttribute('data-speed');
-                let x=Math.floor(Math.random()*window.innerWidth);
-                let y=Math.floor(Math.random()*window.innerHeight/2);
-
-                layer.style.transfrom = 'translateX('+10+'px) translateY('+10+'px)';
-    
-                });
-            }
-        </script>
+        <script src="modal.js" type="text/javascript"> </script>
     </body>
 </html>
