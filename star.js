@@ -1,5 +1,5 @@
 function stars(){
-  let count=50;
+  let count=100;
   let scene=document.querySelector('.scene');
   let i=0;
   while(i<count){

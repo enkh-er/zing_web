@@ -3,9 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="newsapi">
+        <meta name="keywords" content="zing, зинг, search engine">
         <link rel="stylesheet" href="assets/style.css">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <meta name="keywords" content="zing, зинг, search engine">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Document</title>
@@ -14,26 +15,82 @@
         <header class="navContainer">
             <nav class="navbar">
                 <div class="auth">
-                    <button class="btn btn-default">Нэвтрэх</button>
-                    <button class="btn btn-primary">Бүртгүүлэх</button>
+                    <button class="btn btn-primary" onclick="openSideBar()">sidebar</button>
+                   
                 </div>
                 <h1 class="navh1">Мэдээ хайх</h1>
                 <div class="navSearch">
                     <form class="navForm">
-                        <input class="searchInput" placeholder="" />
-                        <button class="iconButton">
+                        <input class="searchInput" type="text" />
+                        <button class="iconButton" aria-label="search">
                             <i class='fas fa-search'></i>
                         </button>
                     </form>
+                </div>
+                <div class="scene">
+                    <img src="assets/photos/worldwide.svg" class="layer img1"
+                        data-speed="5" alt="worldwide">
+
+                    <img src="assets/photos/planet.svg" class="layer img2"
+                        data-speed="-5" alt="planet">
+
+                    <img src="assets/photos/project.svg" class="layer img3"
+                        data-speed="2" alt="project">
+
+                    <img src="assets/photos/saturn.svg" class="layer img4"
+                        data-speed="-3" alt="saturn">
+
+                    <img src="assets/photos/solar-system.svg" class="layer img5"
+                        alt="solar-system">
                 </div>
             </nav>
         </header>
         <main>
             <section class="template">
-                <button class="borderBox">
+                <button class="borderBox" aria-label="border">
                     <div class="plusIcon"></div>
                 </button>
             </section>
         </main>
+        <div></div>
+        <section id="sidebar" class="sidebar">
+                <header>
+                  <img src="" alt="user profile" />
+                  <h3>User name</h3>
+                  <p>Edit profile</p>
+                </header>
+                <main>
+                  <ul>
+                    <li>
+                      <a href="/">Add border</a>
+                    </li>
+                    <li>
+                      <div>
+                        <i class="fa fa-chevron-up"></i>
+                        borders
+                        <ul>
+                          <li>border 1</li>
+                          <li>border 2</li>
+                          <li>border 3</li>
+                          <li>border 4</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </main>
+                <footer>
+                  <button>Log out</button>
+                  <p>
+                    ZING v1.0.1
+                    <br />
+                    2020
+                  </p>
+                </footer>
+        </section>
+        <footer></footer>
+        <script src="star.js" type="text/javascript"></script>
+        <script src="modal.js" type="text/javascript"> </script>
+        <script src="script.js" type="text/javascript" ></script>
+
     </body>
 </html>

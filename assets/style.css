@@ -202,10 +202,10 @@ img{
     border-radius: 20px;
     opacity: 1;
     justify-content: center;
-    transition: 1s;
 }
 .borderBox:hover{
     transform: scale(1.01);   
+    opacity: 0.8;
     border: 1px solid var(--light-blue-color);
 }
 .plusIcon{
@@ -302,8 +302,24 @@ img{
     background:var(--light-blue-color);
     color: #fff;
 }
- /* .labelForm{
-    margin:0 12%;
-    font-size: 23px;
-    color: var(--light-blue-color);
- } */
+
+
+/* =======================side bar===================== */
+
+.sidebar {
+    background-color: var(--light-blue-color);
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: .8s;
+  }
+  
+  .sidebar.active {
+    right: 0;
+    /* transition: 350ms; */
+  }
