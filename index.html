@@ -59,7 +59,7 @@
                     <button  class="btn btn-bottomBorder fullWidth">
                         Нэвтрэх
                     </button>
-                    <button class="btn btn-nobottomBorder fullWidth" onclick="openRegisterForm()">
+                    <button class="btn btn-nobottomBorder fullWidth" type="button" onclick="openRegisterForm()">
                         Бүртгүүлэх
                     </button>
                 </header>
@@ -81,12 +81,12 @@
                     required
                     />
 
-                <div>
-                    <button class="btn btn-primary" type="submit">
+                <div class="gridCont">
+                    <button class="btn btn-primary gridItem" type="submit">
                         Нэвтрэх
                     </button>
 
-                    <button class="btn btn-secondary"
+                    <button class="btn btn-secondary gridItem"
                         onclick="closeLoginForm()">
                         Буцах
                     </button>
@@ -108,7 +108,7 @@
         <section id="registerModal"  class="modal">
             <form class="modal-content animate">
             <header class="modal-header">
-                <button class="btn btn-nobottomBorder fullWidth" onclick="openLoginForm()">
+                <button class="btn btn-nobottomBorder fullWidth" onclick="openLoginForm()" type="button">
                     Нэвтрэх
                 </button>
                 <button class="btn btn-bottomBorder fullWidth"> 
@@ -117,7 +117,7 @@
             </header>
             
                 <input
-                    name="username"
+                    name="registerUsername"
                     type="text"
                     class="inputForm"
                     placeholder="Нэвтрэх нэр эсвэл и-мэйл"
@@ -131,7 +131,7 @@
                     required
                     />
                 <input
-                    name="password"
+                    name="registerPassword"
                     type="password"
                     class="inputForm"
                     placeholder="Нууц үг"
@@ -145,14 +145,14 @@
                     required
                     />
 
-                <div>
-                    <button class="btn btn-primary" type="submit">
+                <div class="gridCont">
+                    <button class="btn btn-primary gridItem" type="submit">
                         Бүртгүүлэх
                     </button>
 
                     <button
                     onclick="closeRegisterForm()"
-                        class="btn btn-secondary" >
+                        class="btn btn-secondary gridItem" >
                         Буцах
                     </button>
                 </div>

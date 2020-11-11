@@ -26,7 +26,7 @@ function openLoginForm() {
      }
  }
  window.onclick = function(event) {
-     if (event.target == modalregisterModal) {
+     if (event.target == registerModal) {
          registerModal.style.display = "none";
      }
  }
