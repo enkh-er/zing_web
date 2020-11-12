@@ -48,7 +48,8 @@
 
     <main>
       <section class="template">
-        <button class="borderBox" aria-label="border" onclick="openBorderForm()">
+        <button class="borderBox" aria-label="border" onclick="openBorderForm()"
+          type="button">
           <div class="plusIcon"></div>
         </button>
       </section>
@@ -87,7 +88,8 @@
 
     <section id="borderModal" class="modal">
       <form class="modal-content animate">
-        <h1 style="color:#3f51b5;margin-top: 5vh;margin-bottom: 3vh;">Border detail</h1>
+        <h1 style="color:#3f51b5;margin-top: 5vh;margin-bottom: 3vh;">Border
+          detail</h1>
         <input
           name="borderName"
           type="text"
@@ -177,6 +179,7 @@
 
           <button
             onclick="closeBorderForm()"
+            type="button"
             class="btn btn-secondary gridItem">
             Буцах
           </button>
