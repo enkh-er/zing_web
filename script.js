@@ -1,6 +1,5 @@
+var sidebar = document.getElementById('sidebar');
 
-
-var sidebar = document.getElementsById('sidebar');
 function openSideBar() {
     var element = document.getElementById("sidebar");
     element.classList.add("active");
@@ -10,34 +9,29 @@ function closeSideBar() {
     element.classList.remove("active");
 }
 
-// window.onload = function() {
-//     document.onclick=function(event){
-//         if (event.target.id !== sidebar) {
-//             sidebar.classList.remove("active");
-//         }
-//     }
-// }
-var modal = document.getElementById('sidebar');
-
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    closeSideBar();
+    let myStyle =  document.querySelector(".sidebar");
+    let s=window.getComputedStyle(myStyle);
+    console.log(s.right);
+    if (event.target !== sidebar && s.right === "0px" ) {
+        sidebar.classList.remove("active");
+    }
   }
+
+
+// =================side bar dropdown js==================
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
 }
-// window.onclick = function(event) {
-//     if (event.target.id !== sidebar) {
-//         closeSideBar();
-//     }
-// }
-// $('body').click(function(){
-//     $('#sidebar').removeClass('active');
-// });
-// document.getElementsByTagName( "body" ).click(function( event ) {
-//   var a  = event.target;
-//   if(a !== sidebar){
-//     closeSideBar();
-// //close the sidebar
-// //you may also want to test if it is actually open before calling the close function.
-// }
-// });
