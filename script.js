@@ -12,7 +12,7 @@ function closeSideBar() {
 window.onclick = function(event) {
     let myStyle =  document.querySelector(".sidebar");
     let s=window.getComputedStyle(myStyle);
-    console.log(s.right);
+    // console.log(s.right);
     if (event.target !== sidebar && s.right === "0px" ) {
         sidebar.classList.remove("active");
     }

@@ -15,7 +15,8 @@
     <header class="navContainer">
       <nav class="navbar">
         <div class="auth">
-          <button class="btn btn-primary" onclick="openSideBar()">sidebar</button>
+          <button class="sideBtn" onclick="openSideBar()"><i class='fas
+              fa-align-justify'></i></button>
         </div>
         <h1 class="navh1">Мэдээ хайх</h1>
         <div class="navSearch">
@@ -44,14 +45,15 @@
         </div>
       </nav>
     </header>
+
     <main>
       <section class="template">
-        <button class="borderBox" aria-label="border">
+        <button class="borderBox" aria-label="border" onclick="openBorderForm()">
           <div class="plusIcon"></div>
         </button>
       </section>
     </main>
-    <div></div>
+
     <section id="sidebar" class="sidebar">
       <header class="sidebarHeader">
         <img src="assets/photos/astronaut.svg" alt="user profile" />
@@ -62,8 +64,8 @@
       <main>
         <a href="#" class="link"><h2>Add border</h2></a>
         <button class="dropdown-btn"><h2>borders
-          <i class="fa fa-caret-down"></i>
-        </h2>
+            <i class="fa fa-caret-down"></i>
+          </h2>
         </button>
         <ul class="dropdown-container">
           <li><a href="#">border 1</a></li>
@@ -82,6 +84,106 @@
         </p>
       </footer>
     </section>
+
+    <section id="borderModal" class="modal">
+      <form class="modal-content animate">
+        <h1 style="color:#3f51b5;margin-top: 5vh;margin-bottom: 3vh;">Border detail</h1>
+        <input
+          name="borderName"
+          type="text"
+          class="inputForm"
+          placeholder="Border name"
+          required
+          />
+        <input
+          name="domain"
+          type="text"
+          class="inputForm"
+          placeholder="Domain"
+          required
+          />
+        <input
+          name="source"
+          type="text"
+          class="inputForm"
+          placeholder="Source"
+          required
+          />
+        <div class="gridCont">
+          <select
+            name="country"
+            id="country"
+            required>
+            <option value="">Улс</option>
+            <option value="ua">UA</option>
+            <option value="us">US</option>
+            <option value="ae">AE</option>
+            <option value="ar">AR</option>
+            <option value="at">AT</option>
+            <option value="au">AU</option>
+            <option value="be">BE</option>
+            <option value="bg">BG</option>
+            <option value="br">BR</option>
+            <option value="KO">KO</option>
+            <option value="ca">CA</option>
+            <option value="ch">CH</option>
+            <option value="cn">CN</option>
+            <option value="co">CO</option>
+            <option value="cu">CU</option>
+            <option value="cz">CZ</option>
+            <option value="de">DE</option>
+            <option value="eg">EG</option>
+            <option value="fr">FR</option>
+            <option value="gb">GB</option>
+            <option value="gr">GR</option>
+            <option value="hk">HK</option>
+            <option value="hu">HU</option>
+            <option value="id">KO</option>
+            <option value="ie">IE</option>
+            <option value="il">IL</option>
+            <option value="in">IN</option>
+            <option value="it">IT</option>
+            <option value="jp">JP</option>
+            <option value="kr">KR</option>
+            <option value="lt">LT</option>
+            <option value="lv">LV</option>
+            <option value="ma">MA</option>
+            <option value="mx">MX</option>
+            <option value="my">MY</option>
+            <option value="ng">NG</option>
+            <option value="nl">NL</option>
+            <option value="no">NO</option>
+          </select>
+
+          <select name="categoty" id="categoty">
+            <option value="">Ангилал</option>
+            <option value="business">business</option>
+            <option value="entertainment">entertainment</option>
+            <option value="general">general</option>
+            <option value="health">health</option>
+            <option value="science">science</option>
+            <option value="technology">technology</option>
+            <option value="sports">sports</option>
+          </select>
+        </div>
+        <div class="gridCont">
+          <input type="date" id="startDate" name="startDate" class="date">
+          <input type="date" id="endDate" name="endDate" class="date">
+        </div>
+        <div class="gridCont">
+          <button class="btn btn-primary gridItem" type="submit">
+            Бүртгүүлэх
+          </button>
+
+          <button
+            onclick="closeBorderForm()"
+            class="btn btn-secondary gridItem">
+            Буцах
+          </button>
+        </div>
+      </form>
+    </section>
+
     <footer></footer>
 
     <script src="star.js" type="text/javascript"></script>

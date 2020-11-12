@@ -181,7 +181,13 @@ button,a{
     border: 4px solid var(--light-blue-color);
     border-width: 0 0 4px 0;
 }
- 
+ .sideBtn{
+     background: transparent;
+     border: none;
+     outline: none;
+     color: #fff;
+     font-size: 2.5em;
+ }
 /* ------------------full width css--------------- */
 .fullWidth{
     width: 100%;
@@ -259,14 +265,33 @@ button,a{
       display: flex;
       justify-content: space-around;
   }
-  .gridCont{
+ .gridCont{
     margin-bottom: 2vh;
     width: 78%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.modal-content select{
+    height: 5vh;
+    width: 48%;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius:10px ;
+    padding-left: 3%;
+    font-size: 25px;
+}
+.date{
+    width: 44%;
+    height: 5vh;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius:10px ;
+    padding-left: 3%;
+    font-size: 25px;
 }
 .gridItem{
-    width: 60%;
+    width: 47%;
 }
   /* Add Zoom Animation */
 .animate {
@@ -286,7 +311,7 @@ button,a{
 
   .inputForm{
     margin-bottom: 3vh;
-    width: 78%;
+    width: 75%;
     height: 5vh;
     outline: none;
     border: 1px solid #ccc;
